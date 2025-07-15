@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Chuck Norris Witz</title>
+    
+    <!-- ANFANG DES STYLE-BLOCKS: ALLE DESIGN-REGELN MÜSSEN HIER DRIN SEIN -->
     <style>
         /* Der Body setzt nur noch den Hintergrund und die Schriftart */
         body {
@@ -14,7 +16,7 @@
             box-sizing: border-box;
         }
 
-        /* NEUER CONTAINER, DER DAS LAYOUT KONTROLLIERT */
+        /* Der Container, der das Layout kontrolliert */
         .container {
             display: flex;
             flex-direction: column; /* Stapelt die Elemente untereinander */
@@ -41,6 +43,8 @@
             margin: 20px 0;
         }
     </style>
+    <!-- ENDE DES STYLE-BLOCKS -->
+    
 </head>
 <body>
 
@@ -48,13 +52,13 @@
     <div class="container">
         
         <!-- Bild oben -->
-        <img src="norris1.png" alt="Emotionstabelle von Chuck Norris" class="joke-image">
+        <img src="emotionen.png" alt="Emotionstabelle von Chuck Norris" class="joke-image">
 
         <!-- Der Witz in der Mitte -->
         <p id="joke-text"></p>
 
         <!-- Bild unten -->
-        <img src="norris2.png" alt="Chuck Norris am Telefon" class="joke-image">
+        <img src="telefon.png" alt="Chuck Norris am Telefon" class="joke-image">
 
     </div>
     <script>
