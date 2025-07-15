@@ -61,58 +61,25 @@
         <img src="norris2.png" alt="Chuck Norris am Telefon" class="joke-image">
 
     </div>
+
+
     <script>
-        // JavaScript mit allen Witzen bleibt unverändert...
         const jokeElement = document.getElementById('joke-text');
+
+        // Die komplette Liste Ihrer Witze
         const germanJokes = [
-            "Der Akku von Chuck Norris‘ Smartphone ist schon seit drei Monaten leer, aber es traut sich nicht auszugehen.",
-            "Chuck Norris hat einen Grizzlybären-Vorleger in seinem Zimmer. Der Bär ist nicht tot, er hat nur Angst sich zu bewegen.",
-            "Chuck Norris läuft die 100 m in einer Sekunde. Er kennt eine Abkürzung.",
-            "Chuck Norris ist eigentlich schon vor 10 Jahren gestorben. Der Tod hatte bisher nur noch nicht den Mut, es ihm zu sagen.",
-            "Chuck Norris hat bis zur Unendlichkeit gezählt. Zweimal.",
-            "Chuck Norris kann schwarze Filzstifte nach Farbe sortieren.",
-            "Einige Leute tragen Superman-Schlafanzüge. Superman trägt Chuck-Norris-Schlafanzüge.",
-            "Chuck Norris kann ein Feuer entfachen, indem er zwei Eiswürfel aneinander reibt.",
-            "Chuck Norris kann eine Drehtür zuschlagen.",
-            "Chuck Norris verzichtet auf seine Rechte — seine Linke ist sowieso schneller.",
-            "Chuck Norris kennt die letzte Ziffer von Pi.",
-            "Bill Gates lebt in ständiger Angst, dass der PC von Chuck Norris abstürzt.",
-            "Chuck Norris hat beim Pokern gewonnen, mit Pokémon-Karten.",
-            "Chuck Norris gewinnt Schach in einem Zug.",
-            "Chuck braucht keine Fernbedienung, der Fernseher schaltet aus Angst um.",
-            "Arnold Schwarzenegger musste wegen schweren Verletzungen ins Krankenhaus eingeliefert werden. Chuck Norris hatte ihn auf Facebook angestupst.",
-            "Chuck Norris hat seine Führerscheinprüfung bestanden – und zwar zu Fuß.",
-            "Chuck Norris kann im Kinderkarussell überholen.",
-            "Chuck Norris kann unter Wasser grillen.",
-            "Chuck Norris hatte einmal Atlantis besucht. Der Rest ist Geschichte.",
-            "Chuck Norris kann mit zwei Händen 29 zeigen.",
-            "Chuck Norris sucht nicht, er findet.",
-            "Chuck Norris hat binnen 23 Minuten den Mount Everest bestiegen. Es hätte nur 10 Minuten in Anspruch genommen, wenn der Berg nicht versucht hätte zu flüchten.",
-            "Das Auto von Chuck Norris braucht kein Benzin, es fährt aus Respekt.",
-            "Beim Spazierengehen wurde neulich der Blitz von Chuck Norris getroffen.",
-            "Am siebten Tag machte Gott eine Pause, weil Chuck Norris seine Ruhe haben wollte.",
-            "Chuck Norris kann in der Ecke eines kreisrunden Raums sitzen.",
-            "Es gibt keine Evolutionstheorie. Nur eine Liste von Kreaturen, denen Chuck Norris erlaubt zu leben.",
-            "Chuck Norris trägt keine Uhr. Er entscheidet, wie spät es ist.",
-            "Chuck Norris hat beim Schwimmen Amerika entdeckt.",
-            "Gott sprach: 'Es werde Licht!' Chuck Norris antwortete: 'Sag bitte!'",
-            "Chuck Norris kann über seinen Schatten springen.",
-            "Chuck Norris schläft bei Licht. Nicht weil er Angst vor der Dunkelheit hat, sondern weil die Dunkelheit Angst vor ihm hat.",
-            "Chuck Norris wirft keinen Schatten. Die Wand will nur so aussehen wie er.",
-            "Als Alexander Bell das Telefon erfand, hatte er bereits 3 Anrufe in Abwesenheit von Chuck Norris.",
-            "Geister sitzen um das Lagerfeuer und erzählen Chuck-Norris-Geschichten.",
-            "Chuck Norris war einmal in eine Messerstecherei verwickelt. Das Messer hat verloren.",
-            "Chuck Norris schläft nicht. Er wartet.",
-            "Wenn Chuck Norris Liegestütze macht, drückt er nicht sich selbst nach oben, sondern die Welt nach unten.",
-            "Chuck Norris isst keinen Honig. Er kaut Bienen.",
-            "Chuck Norris kann durch Null teilen.",
-            "Das Universum dehnt sich nicht aus. Es läuft vor Chuck Norris davon."
+            "Der Akku von Chuck Norris‘ Smartphone ist schon seit drei Monaten leer, aber es traut sich nicht auszugehen.", "Chuck Norris hat einen Grizzlybären-Vorleger in seinem Zimmer. Der Bär ist nicht tot, er hat nur Angst sich zu bewegen.", "Chuck Norris läuft die 100 m in einer Sekunde. Er kennt eine Abkürzung.", "Chuck Norris ist eigentlich schon vor 10 Jahren gestorben. Der Tod hatte bisher nur noch nicht den Mut, es ihm zu sagen.", "Chuck Norris hat bis zur Unendlichkeit gezählt. Zweimal.", "Chuck Norris kann schwarze Filzstifte nach Farbe sortieren.", "Einige Leute tragen Superman-Schlafanzüge. Superman trägt Chuck-Norris-Schlafanzüge.", "Chuck Norris kann ein Feuer entfachen, indem er zwei Eiswürfel aneinander reibt.", "Chuck Norris kann eine Drehtür zuschlagen.", "Chuck Norris verzichtet auf seine Rechte — seine Linke ist sowieso schneller.", "Chuck Norris kennt die letzte Ziffer von Pi.", "Bill Gates lebt in ständiger Angst, dass der PC von Chuck Norris abstürzt.", "Chuck Norris hat beim Pokern gewonnen, mit Pokémon-Karten.", "Chuck Norris gewinnt Schach in einem Zug.", "Chuck braucht keine Fernbedienung, der Fernseher schaltet aus Angst um.", "Arnold Schwarzenegger musste wegen schweren Verletzungen ins Krankenhaus eingeliefert werden. Chuck Norris hatte ihn auf Facebook angestupst.", "Chuck Norris hat seine Führerscheinprüfung bestanden – und zwar zu Fuß.", "Chuck Norris kann im Kinderkarussell überholen.", "Chuck Norris kann unter Wasser grillen.", "Chuck Norris hatte einmal Atlantis besucht. Der Rest ist Geschichte.", "Chuck Norris kann mit zwei Händen 29 zeigen.", "Chuck Norris sucht nicht, er findet.", "Chuck Norris hat binnen 23 Minuten den Mount Everest bestiegen. Es hätte nur 10 Minuten in Anspruch genommen, wenn der Berg nicht versucht hätte zu flüchten.", "Das Auto von Chuck Norris braucht kein Benzin, es fährt aus Respekt.", "Beim Spazierengehen wurde neulich der Blitz von Chuck Norris getroffen.", "Am siebten Tag machte Gott eine Pause, weil Chuck Norris seine Ruhe haben wollte.", "Chuck Norris kann in der Ecke eines kreisrunden Raums sitzen.", "Es gibt keine Evolutionstheorie. Nur eine Liste von Kreaturen, denen Chuck Norris erlaubt zu leben.", "Chuck Norris trägt keine Uhr. Er entscheidet, wie spät es ist.", "Chuck Norris hat beim Schwimmen Amerika entdeckt.", "Gott sprach: 'Es werde Licht!' Chuck Norris antwortete: 'Sag bitte!'", "Chuck Norris kann über seinen Schatten springen.", "Chuck Norris schläft bei Licht. Nicht weil er Angst vor der Dunkelheit hat, sondern weil die Dunkelheit Angst vor ihm hat.", "Chuck Norris wirft keinen Schatten. Die Wand will nur so aussehen wie er.", "Als Alexander Bell das Telefon erfand, hatte er bereits 3 Anrufe in Abwesenheit von Chuck Norris.", "Geister sitzen um das Lagerfeuer und erzählen Chuck-Norris-Geschichten.", "Chuck Norris war einmal in eine Messerstecherei verwickelt. Das Messer hat verloren.", "Chuck Norris schläft nicht. Er wartet.", "Wenn Chuck Norris Liegestütze macht, drückt er nicht sich selbst nach oben, sondern die Welt nach unten.", "Chuck Norris isst keinen Honig. Er kaut Bienen.", "Chuck Norris kann durch Null teilen.", "Das Universum dehnt sich nicht aus. es läuft vor Chuck Norris davon."
         ];
-        function displayRandomJoke() { 
-            const randomIndex = Math.floor(Math.random() * germanJokes.length); 
-            const randomJoke = germanJokes[randomIndex]; jokeElement.textContent = randomJoke; }
+        
+        function displayRandomJoke() {
+            const randomIndex = Math.floor(Math.random() * germanJokes.length);
+            const randomJoke = germanJokes[randomIndex];
+            jokeElement.textContent = randomJoke;
+        }
+
         displayRandomJoke();
         setInterval(displayRandomJoke, 150000);
     </script>
+
 </body>
 </html>
