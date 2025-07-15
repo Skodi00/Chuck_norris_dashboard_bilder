@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Chuck Norris Witz</title>
-    <style>
-        /* CSS bleibt unverändert */
-               body {
+        body {
             background-color: #1a1a21;
             color: #dddddd;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            padding: 40px 20px; /* Oben/unten mehr Platz, seitlich etwas Platz */
+            padding: 20px;
             box-sizing: border-box;
-            text-align: center;
-            
-            /* NEUES LAYOUT: Flexbox für vertikale Anordnung */
+        }
+
+        /* NEUER CONTAINER, DER DAS LAYOUT KONTROLLIERT */
+        .container {
             display: flex;
-            flex-direction: column; /* Stapelt alles untereinander */
-            align-items: center;    /* Zentriert alles horizontal */
-            justify-content: center;/* Zentriert alles vertikal (wenn der Inhalt klein ist) */
-            min-height: 100vh;      /* Stellt sicher, dass der Body immer die volle Höhe hat */
+            flex-direction: column; /* Stapelt die Elemente untereinander */
+            align-items: center;    /* Zentriert sie horizontal */
+            text-align: center;
         }
 
         /* Styling für die Bilder */
         .joke-image {
-            max-width: 350px; /* Macht die Bilder deutlich größer */
-            width: 80%;       /* Sorgt für gute Darstellung auf kleineren Bildschirmen */
+            max-width: 350px;
+            width: 80%;
             height: auto;
             border: 3px solid white;
             border-radius: 8px;
@@ -35,19 +33,27 @@
 
         /* Styling für den Witz-Text */
         #joke-text {
-            font-size: 1.6em; /* Größere Schrift für mehr Wirkung */
+            font-size: 1.6em;
             line-height: 1.6;
-            max-width: 800px; /* Begrenzt die Breite für bessere Lesbarkeit */
-            margin: 20px 0;   /* Abstand zu den Bildern */
+            max-width: 800px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <div id="joke-container">
-        <!-- BILDER WERDEN JETZT LOKAL GELADEN -->
-        <img src="norris1.png" alt="norris1" class="frame-image norris1">
+
+    <!-- Alle Elemente sind jetzt in diesem Container verpackt -->
+    <div class="container">
+        
+        <!-- Bild oben -->
+        <img src="norris1.png" alt="Emotionstabelle von Chuck Norris" class="joke-image">
+
+        <!-- Der Witz in der Mitte -->
         <p id="joke-text"></p>
-        <img src="norris2.png" alt="norris2" class="frame-image norris2">
+
+        <!-- Bild unten -->
+        <img src="norris2.png" alt="Chuck Norris am Telefon" class="joke-image">
+
     </div>
     <script>
         // JavaScript mit allen Witzen bleibt unverändert...
@@ -96,7 +102,9 @@
             "Chuck Norris kann durch Null teilen.",
             "Das Universum dehnt sich nicht aus. Es läuft vor Chuck Norris davon."
         ];
-        function displayRandomJoke() { const randomIndex = Math.floor(Math.random() * germanJokes.length); const randomJoke = germanJokes[randomIndex]; jokeElement.textContent = randomJoke; }
+        function displayRandomJoke() { 
+            const randomIndex = Math.floor(Math.random() * germanJokes.length); 
+            const randomJoke = germanJokes[randomIndex]; jokeElement.textContent = randomJoke; }
         displayRandomJoke();
         setInterval(displayRandomJoke, 150000);
     </script>
